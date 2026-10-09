@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="Temukan hewan yang cocok dengan kebutuhanmu melalui rekomendasi transparan berbasis AI heuristik.">
+  <title>HEWAN.AI — Temukan teman yang cocok</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="HEWAN.AI beranda">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span>HEWAN<span class="brand-dot">.</span>AI<small>SMART PET COMPANION</small></span>
+      </a>
+      <div class="sidebar-label">MENU UTAMA</div>
+      <nav class="navigation" aria-label="Navigasi utama">
+        <button class="nav-link active" data-page="home"><span>⌂</span> Beranda</button>
+        <button class="nav-link" data-page="chat"><span>◉</span> Tanya AI</button>
+        <button class="nav-link" data-page="matching"><span>✳</span> Tes kecocokan</button>
+        <button class="nav-link" data-page="animals"><span>♡</span> Jelajahi hewan</button>
+        <button class="nav-link" data-page="compare"><span>⇄</span> Bandingkan</button>
+      </nav>
+      <div class="sidebar-label second-label">PENGELOLAAN</div>
+      <nav class="navigation" aria-label="Pengelolaan data">
+        <button class="nav-link" data-page="training"><span>✧</span> Latih AI</button>
+        <button class="nav-link" data-page="about"><span>ⓘ</span> Tentang AI</button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-note">
+        <span class="note-icon">✦</span>
+        <strong>Adopsi dengan hati</strong>
+        <p>Setiap hewan punya kebutuhan unik. Pastikan kamu siap merawatnya seumur hidup.</p>
+      </div>
+      <div class="local-status"><span></span> Data tersimpan di perangkat ini</div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button id="mobile-menu" class="mobile-menu" aria-label="Buka menu">☰</button>
+        <div class="breadcrumb"><span>HEWAN.AI</span><b>/</b><strong id="page-label">Beranda</strong></div>
+        <div class="topbar-actions">
+          <span class="topbar-date" id="today-label"></span>
+          <button class="avatar-button" data-page="training" title="Kelola dan latih data">🐾</button>
+        </div>
+      </header>
+      <div id="app-notice" class="notice hidden" role="status"></div>
+      <div id="page-root"></div>
+      <footer class="app-footer">
+        <span>HEWAN.AI <i>•</i> Sistem rekomendasi hewan berbasis heuristik</span>
+        <span>Informasi umum, bukan pengganti dokter hewan</span>
+      </footer>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
